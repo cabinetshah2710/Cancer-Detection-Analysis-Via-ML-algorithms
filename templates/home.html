@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANCER DETECTION & ANALYSIS</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Hide the div
+            $("#div1").hide();
+            // Show the div after 5s
+            $("#div1").delay(1000).fadeIn(100);
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: 'https://api.apispreadsheets.com/data/2qsydeDX1P0jwAiC/',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function() {
+                    alert("Welcome :)")
+                },
+                error: function() {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+</head>
+
+<style>
+    .button {
+        background: #5E5DF0;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 200px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button1 {
+        background: #5E5DF0;
+        border-bottom-left-radius: 40px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 230px;
+        height: 54px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button1:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button2 {
+        background: #5E5DF0;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 220px;
+        height: 54px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button2:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button3 {
+        background: #5E5DF0;
+        border-bottom-right-radius: 40px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 230px;
+        height: 54px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button3:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button:hover {
+        background-color: white;
+        color: black;
+        transform: scale(1.3);
+    }
+    
+    .button1:hover,
+    .button2:hover,
+    .button3:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+</style>
+
+<style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        border-color: rgb(167, 167, 241);
+        border-width: .25em;
+        border-style: double;
+        border-top-width: 0;
+        background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url('/static/homebg.jpg');
+        background-position: inherit;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: 3s;
+        animation-name: animate;
+        animation-direction: alternate-reverse;
+        animation-duration: 30s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinte;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes animate {
+        0% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/home1.jpg)
+        }
+        10% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/homebg.jpg)
+        }
+        20% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/home1.jpg)
+        }
+        30% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/homebg.jpg)
+        }
+        40% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/home1.jpg)
+        }
+        50% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/homebg.jpg)
+        }
+        60% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/home1.jpg)
+        }
+        70% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/homebg.jpg)
+        }
+        80% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/home1.jpg)
+        }
+        90% {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/homebg.jpg)
+        }
+    }
+    
+    .heading {
+        background-color: none;
+        padding: 10px;
+        color: black;
+        width: 50%;
+        margin-top: 115px;
+        border-radius: 30px;
+    }
+    
+    .heading:hover {
+        transform: scale(1.36);
+        background-color: slategray;
+    }
+    
+    .UCG {
+        background-color: none;
+        width: 35%;
+        margin-top: 20%;
+        height: 260px;
+        margin-bottom: 2%;
+        text-align: center;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    
+    .UCG:hover {
+        background: rgba(51, 170, 51, .4);
+        color: black;
+    }
+    
+    .required:after {
+        content: " *";
+        color: red;
+    }
+    
+    .mj1 {
+        width: 52%;
+        float: left;
+        margin-left: 52%;
+        margin-top: -6%;
+    }
+    
+    .mj1:hover {
+        transform: scale(0.85);
+        margin-top: -6.3%;
+    }
+    
+    .UCG1 {
+        padding-top: 3%;
+        color: black;
+    }
+    
+    .UCG1:hover {
+        background: none;
+        color: white;
+        border-radius: 40px;
+    }
+    
+    .input {
+        width: 40%;
+        height: 28px;
+        border-radius: 899px;
+        text-align: center;
+    }
+    
+    .input:invalid {
+        animation: shake 300ms;
+    }
+    
+    @keyframes shake {
+        25% {
+            transform: translateX(10px);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+        75% {
+            transform: translateX(10px);
+        }
+    }
+    
+    .header {
+        background-color: white;
+        height: fit-content;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 20px 10px rgb(0 0 0 / 0.2), 0 0 25px 0px rgb(164, 243, 164);
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    
+    .header:hover {
+        color: white;
+        background-color: crimson;
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgb(209, 44, 44), 0 0 140px 90px rgb(209, 44, 44);
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="topic">
+
+            <h1> <img src="/static/ribbon.png" alt="cancer logo" width="50px" height="30px"> CANCER DETECTION & ANALYSIS </h1>
+        </div>
+        <div class="mj1" style="width:fit-content;display:none;" id="div1">
+            <div style="float: left; width: fit-content">
+                <form action="/Registration" method="POST" style="margin-right: auto;">
+                    <abbr><abbr title="Press To contact us">
+                    <button type="Registration Form" class="button1" style="vertical-align:middle"> <span>📞 Catch Us </span></button></abbr>
+                </form>
+            </div>
+            <div style="float: left; width: fit-content; margin-left: 4px;margin-right: 4px;">
+                <form action="/test" method="POST" style="margin-right: auto;">
+                    <abbr><abbr title="Press To Give Feedback">
+                    <button type="Feedback" class="button2" style="vertical-align:middle"> <span>👍Feedback👎</span></button></abbr>
+                </form>
+            </div>
+
+            <div style="float:left; width: fit-content; ">
+                <form action="/developer" method="POST" style="margin-right: auto;">
+                    <abbr><abbr title="Press To view developer details">
+                    <button type="developer" class="button3" style="vertical-align:middle"> <span> 🧑🏻‍💻 Developers</span></button></abbr>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <center>
+        <div class="UCG">
+            <div class="UCG1">
+                <form action="/allset" method="POST">
+
+                    <p><label class="required">Enter Your Name</label></p>
+                    <input type="text" class="input" pattern="[A-Za-z]{2,30}" name="username" placeholder="UserName" required>
+                    <p><label class="required">Enter Your Country</label></p>
+                    <input type="text" class="input" pattern="[A-Za-z]{2,20}" name="Countryname" placeholder="Country" required>
+                    <br><br>
+                    <button type="submit" class="button" style="vertical-align:middle" name="submit"> <span>Submit</span></button>
+
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>

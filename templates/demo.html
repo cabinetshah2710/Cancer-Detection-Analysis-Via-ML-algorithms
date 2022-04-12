@@ -1,0 +1,591 @@
+<html>
+
+<head>
+    <title>DataAnalysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .button1 {
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 200px;
+            word-break: break-word;
+            border: 0;
+        }
+        
+        .button1:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .button1:hover {
+            background-color: white;
+            color: black;
+        }
+        
+        .button2 {
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 200px;
+            word-break: break-word;
+            border: 0;
+        }
+        
+        .button2:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .button2:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.3);
+        }
+        
+        .button21 {
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
+        
+        .button21:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .button21:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <style type=text/css>
+        .input {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .leftdiv {
+            float: left;
+            width: 49.8%;
+            height: 100%;
+            background-color: none;
+            color: white;
+            border-radius: 30px;
+            margin-right: 2.5px;
+        }
+        
+        .leftdiv:hover {
+            transform: scale(0.97);
+            background: rgba(51, 170, 51, .4);
+            color: black;
+        }
+        
+        .middlediv {
+            float: left;
+            height: 100%;
+            width: 49.8%;
+            background-color: none;
+            color: white;
+            border-radius: 30px;
+            margin-left: 2.5px;
+        }
+        
+        .middlediv:hover {
+            transform: scale(0.97);
+            background: rgba(51, 170, 51, .4);
+            color: black;
+        }
+        
+        .l1 {
+            background: rgba(51, 170, 51, .4);
+            margin: 10px 18px 10px 18px;
+            padding: 10px 10px 10px 10px;
+            border-radius: 28px;
+            animation-name: data;
+            animation-duration: 14s;
+        }
+        
+        .l1:hover {
+            transform: scale(0.96);
+            background: rgba(51, 170, 51, .7);
+            color: white;
+        }
+        
+        .l2 {
+            position: relative;
+            margin: -5px 18px 15px 18px;
+            background: rgba(51, 170, 51, .4);
+            border-radius: 28px;
+            padding: 10px 10px 10px 10px;
+            animation-name: data;
+            animation-duration: 14s;
+        }
+        
+        .l2:hover {
+            background: rgba(51, 170, 51, .7);
+            color: white;
+        }
+        
+        .m1 {
+            background: rgba(51, 170, 51, .4);
+            margin: 10px 18px 10px 18px;
+            padding: 10px 10px 10px 10px;
+            padding-bottom: 30px;
+            border-radius: 28px;
+            animation-name: data;
+            animation-duration: 14s;
+        }
+        
+        .m1:hover {
+            transform: scale(0.96);
+            background: rgba(51, 170, 51, .7);
+            color: white;
+        }
+        
+        .m2 {
+            position: relative;
+            margin: -5px 18px 15px 18px;
+            background: rgba(51, 170, 51, .4);
+            border-radius: 28px;
+            padding: 10px 10px 10px 10px;
+            animation-name: data;
+            animation-duration: 14s;
+        }
+        
+        .m2:hover {
+            background: rgba(51, 170, 51, .7);
+            color: white;
+        }
+        
+        #A {
+            height: 55%;
+            padding: 0%;
+            color: 111;
+            background-color: none;
+            width: 100%;
+            text-align: center;
+            border: solid fff;
+        }
+        
+        .rightdiv {
+            height: 30%;
+            background-color: rgba(51, 170, 51, .5);
+            border-bottom-left-radius: 70%;
+            border-bottom-right-radius: 70%;
+            padding: 0%;
+            margin: 12px;
+            color: white;
+            width: 98%;
+            text-align: center;
+        }
+        
+        @keyframes data {
+            from {
+                background-color: rgba(51, 170, 51, .7);
+                ;
+            }
+            to {
+                background-color: crimson;
+            }
+        }
+        
+        .header {
+            background-color: white;
+            height: fit-content;
+            padding-left: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: #5E5DF0;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        
+        .header:hover {
+            color: white;
+            background-color: crimson;
+            box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgb(209, 44, 44), 0 0 140px 90px rgb(209, 44, 44);
+        }
+        
+        .r1 {
+            float: right;
+            margin-top: -3.7%;
+            margin-right: 40px;
+        }
+        
+        .r2 {
+            padding-top: 3%;
+            text-align: center;
+            border-bottom-left-radius: 70%;
+            border-bottom-right-radius: 70%;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        .r2:hover {
+            background-color: crimson;
+        }
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            border-color: rgb(167, 167, 241);
+            border-width: .25em;
+            border-style: double;
+            border-top-width: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url('/static/analysis.jpg');
+            transition: 3s;
+            animation-name: animate;
+            animation-direction: alternate-reverse;
+            animation-duration: 30s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinte;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes animate {
+            0% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis.jpg)
+            }
+            10% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis1.jpg)
+            }
+            20% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis.jpg)
+            }
+            30% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis1.jpg)
+            }
+            40% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis.jpg)
+            }
+            50% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis1.jpg)
+            }
+            60% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis.jpg)
+            }
+            70% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis1.jpg)
+            }
+            80% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis.jpg)
+            }
+            90% {
+                background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url(/static/analysis1.jpg)
+            }
+        }
+        
+        textarea {
+            width: auto;
+            font-size: 15px;
+            opacity: 0;
+        }
+        
+        .speak,
+        .speak1 {
+            float: right;
+        }
+        
+        .speak:hover {
+            transform: scale(1.3);
+        }
+        
+        .speak1:hover {
+            transform: scale(1.3);
+        }
+        
+        button {
+            width: 20%;
+            background: white;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        
+        button:active {
+            transform: scale(.98);
+        }
+        
+        .speak .play,
+        .speak1 .play {
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            border-left: 1px solid white;
+            height: 0px;
+        }
+        
+        .button.play {
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+        }
+        
+        .button.play:hover {
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body onload="showAlert1()">
+    <script>
+        function showAlert1() {
+            var myText = "Ready To upload data!";
+            alert(myText);
+        }
+    </script>
+    <div class="header">
+        <div class="topic">
+            <h1><img src="/static/ribbon.png" alt="cancer logo" width="50px" height="30px"> CANCER DETECTION & ANALYSIS </h1>
+        </div>
+        <div class="r1">
+            <form action=" /allset " method="POST ">
+                <button type="Submit " class="button2" style="vertical-align:middle "> <span>↩️ Previous </span></button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showAlert21() {
+            var myvideo = "https://www.youtube.com/watch?v=SYypBH2Q0nQ"
+            window.open(myvideo, "", "toolbar=no,status=no,menubar=no,location=center,left=400,top=230,scrollbars=no,resizable=yes,height=480,width=800");
+        }
+
+        function showAlert22() {
+            var myvideo = "https://www.youtube.com/watch?v=bhLDAXGsH-o"
+            window.open(myvideo, "", "toolbar=no,status=no,menubar=no,location=center,left=400,top=230,scrollbars=no,resizable=yes,height=480,width=800");
+        }
+    </script>
+
+    <div class="mj">
+        <div class="rightdiv">
+            <div class="r2">
+                <h1>Upload Dataset For Analysis</h1>
+                <p><b>File must have ( .csv ) extention</b></p>
+            </div>
+        </div>
+        <div id="A">
+
+            <div class="leftdiv">
+
+
+                <div class="l1">
+                    <div class="demodiv" style="float: left;margin-left: 2px; left: 2px;">
+                        <button type=" Submit " class="button21" onclick="showAlert21() " style="vertical-align:middle "> <span> Demo <i class="fa fa-paper-plane" aria-hidden="true"></i></span></button>
+                    </div>
+                    <textarea class="text1" style="resize: none;" id="inputText1"> In this section, End-user has to upload the link of the dataset with (.csv) extension and comma-separated files. It doesn't matter the size of the dataset for making an analysis. End-user can submit any size of the dataset but the link of the dataset shouldn't be a google drive link. Moreover, before submitting the link make sure it's valid. In case the link is invalid & incorrect it might throw an exception message & will terminate the processing right at the middle. At the backend, it's compulsory to have a direct downloadable link of the dataset for making analysis over it.</textarea>
+                    <div class="speak"> <abbr title="Click for Audio"><button class='button play' id="convert1">🔊</button></abbr></div>
+
+                    <p><abbr title="https://www.stats.govt.nz/large-datasets/csv-files-for-download/">
+                        <a href="https://www.stats.govt.nz/large-datasets/csv-files-for-download/" style="font-size: x-large;color:white;font-family: Arial Black;">
+                        <b>Stats Govt. Datasets</b>
+                      </a></abbr> &
+                        <abbr title="https://vincentarelbundock.github.io/Rdatasets/datasets.html">
+                      <a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html" style="font-size: x-large;color:white;font-family: Arial Black;">
+                        <b>vincentarelbundock Datasets</b>
+                      </a></abbr>
+                        </b>
+                    </p>
+                    <script type="text/javascript" src="js/custom.js"></script>
+                    <script>
+                        var convert1 = document.getElementById('convert1'),
+
+                            speech1 = document.getElementById('inputText1'),
+                            count = 1;
+
+                        speech1.addEventListener('change', function() {
+                            speechText = this.value;
+                            speechSynthesis.cancel();
+                            convert.innerHTML = "🔊";
+
+                        });
+                        convert1.addEventListener('click', function() {
+                            if (!speechSynthesis.speaking || speechSynthesis.pause()) {
+                                speechText = speech1.value;
+                                var speechVoice = new SpeechSynthesisUtterance();
+                                var voices = speechSynthesis.getVoices();
+                                speechVoice.voice = voices[2];
+                                speechVoice.text = speechText;
+                                speechVoice.lang = 'en-US';
+                                speechSynthesis.speak(speechVoice);
+                            }
+
+                            if (count == 1) {
+                                convert1.innerHTML = "🔊";
+                                speechSynthesis.resume()
+                                setTimeout(() => {
+                                    count = 2;
+                                }, 300);
+
+                            } else {
+                                speechSynthesis.paused
+                                convert1.innerHTML = "🔇";
+                                count = 1;
+
+                            }
+                            setInterval(() => {
+                                if (!speechSynthesis.speaking && count == 2) {
+                                    convert1.innerHTML = "🔊";
+                                    count = 1;
+                                    console.log(count)
+                                }
+                            }, 100);
+
+
+                        })
+                    </script>
+                    <p>
+                        In this section, End-user has to upload the link of the dataset with (.csv) extension and comma-separated files. It doesn't matter the size of the dataset for making an analysis. End-user can submit any size of the dataset but the link of the dataset
+                        shouldn't be a google drive link. Moreover, before submitting the link make sure it's valid. In case the link is invalid & incorrect it might throw an exception message & will terminate the processing right at the middle. At the
+                        backend, it's compulsory to have a direct downloadable link of the dataset for making analysis over it.
+                    </p>
+                </div>
+
+                <script>
+                    function showAlert() {
+                        var myText = "Uploaded Succesfully!";
+                        alert(myText);
+                    }
+                </script>
+                <div class="l2">
+                    <form name="E_link" , action="/analysis" , method="POST">
+                        <p><b> Enter Dataset Link from Any Source Except GoogleDrive </b></p>
+                        <input type="url" name="link" pattern="https://.*.csv" class="input" placeholder="Dataset Link" autocomplete="on" required>
+                        <button onclick="showAlert()" class="button1" style="vertical-align:middle"> <span><i class="fa fa-external-link" aria-hidden="true"></i> E_link </span></button>
+                    </form>
+                </div>
+            </div>
+            <div class="middlediv">
+                <div class="m1">
+                    <div class="demodiv" style="float: left;margin-left: 2px; left: 2px;">
+                        <button type=" Submit " class="button21" onclick="showAlert22() " style="vertical-align:middle "> <span> Demo <i class="fa fa-paper-plane" aria-hidden="true"></i></span></button>
+                    </div>
+                    <textarea class="text" style="resize: none;" id="inputText"> In this Section, the end-user is allowed to submit only the link of the dataset present on google drive. The above link shows the sample of datasets present on the drive. Moreover, a dataset to be uploaded on the drive must contain a comma-separated with (.csv) file extension. Before submitting the link, make sure permission allowed is public visibility. In case the link on the drive is not public then the system at the backend might throw exceptions over submission.</textarea>
+                    <div class="speak1"><abbr title="Click for Audio"><button class='button play' id="convert" style="float: right;align-items: center;top: 0;">🔊</button></abbr></div>
+                    <p><abbr title="Download GoogleDrive dataset">
+                        <a href="https://drive.google.com/drive/folders/1ql0RBgkz9njRDeRqfZXDlFDQvD0Nr0j5?usp=sharing" style="font-size: x-large;color:white;font-family: Arial Black;" >
+                        <b>Sample GoogleDrive Datasets</b>
+                      </a></abbr></b>
+                    </p>
+                    <script type="text/javascript" src="js/custom.js"></script>
+                    <script>
+                        var convert = document.getElementById('convert'),
+
+                            speech = document.getElementById('inputText'),
+                            count = 1;
+
+                        speech.addEventListener('change', function() {
+                            speechText = this.value;
+                            speechSynthesis.cancel();
+                            convert.innerHTML = "🔊";
+
+                        });
+                        convert.addEventListener('click', function() {
+                            if (!speechSynthesis.speaking || speechSynthesis.pause()) {
+                                speechText = speech.value;
+                                var speechVoice = new SpeechSynthesisUtterance();
+                                var voices = speechSynthesis.getVoices();
+                                speechVoice.voice = voices[2];
+                                speechVoice.text = speechText;
+                                speechVoice.lang = 'en-US';
+                                speechSynthesis.speak(speechVoice);
+                            }
+
+                            if (count == 1) {
+                                convert.innerHTML = "🔊";
+                                speechSynthesis.resume()
+                                setTimeout(() => {
+                                    count = 2;
+                                }, 300);
+
+                            } else {
+                                speechSynthesis.paused
+                                convert.innerHTML = "🔇";
+                                count = 1;
+
+                            }
+                            setInterval(() => {
+                                if (!speechSynthesis.speaking && count == 2) {
+                                    convert.innerHTML = "🔊";
+                                    count = 1;
+                                    console.log(count)
+                                }
+                            }, 100);
+
+
+                        })
+                    </script>
+                    <p>
+                        In this Section, the end-user is allowed to submit only the link of the dataset present on google drive. The above link shows the sample of datasets present on the drive. Moreover, a dataset to be uploaded on the drive must contain a comma-separated with
+                        (.csv) file extension. Before submitting the link, make sure permission allowed is public visibility. In case the link on the drive is not public then the system at the backend might throw exceptions over submission.
+                    </p>
+                </div>
+
+
+                <div class="m2">
+                    <form name="G_link" , action="/analysis1" , method="POST">
+                        <p> <b> Enter GoogleDrive Link only </b></p>
+                        <input type="url" name="link1" class="input" pattern="https://drive.google.com/.*" placeholder="GoogleDrive Link" autocomplete="on" required>
+                        <button onclick="showAlert()" class="button1" style="vertical-align:middle"> <span><i class="fa fa-link" aria-hidden="true"></i> G_link</span>  </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

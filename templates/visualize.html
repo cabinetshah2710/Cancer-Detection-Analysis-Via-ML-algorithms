@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{%block content %}
+<br></br>
+<form action="/analysis", method="GET" style="margin-right: auto;">
+    <button type="Submit" class="button" style="vertical-align:middle"> <span> Previous Page </span></button>
+</form>
+<br><br>
+
+<center>
+    <h3><b><U>Visualization</U></b></h3>
+</center>
+<br><br></br></br>
+
+<div class = "row p-4" >
+    <div class="card m-auto" style="width: 90%;">
+        <div class="card-body">
+            <div id="chart1" ></div>
+            <br><br></br></br>
+            <div id="chart2"></div>
+            <br><br></br></br>
+            <div id="chart3"></div>
+            <br><br></br></br>
+            <div id="chart4"></div>
+            <br><br></br></br>
+            <div id="chart5"></div>
+            <br><br></br></br>
+            <div id="chart6"></div>
+            <br><br></br></br>
+            <div id="chart7"></div>
+        </div>
+    </div>
+</div>
+
+    <!-- plotly CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        var graphs1 = {{ graph1 | safe}};
+        Plotly.plot("chart1", graphs1,{});
+
+
+        var graphs2 = {{ graph2 | safe}};
+        Plotly.plot("chart2", graphs2,{});
+
+        var graphs3 = {{ graph3 | safe}};
+        Plotly.plot("chart3", graphs3,{});
+
+        var graphs4 = {{ graph4 | safe}};
+        Plotly.plot("chart4", graphs4,{});
+
+        var graphs5 = {{ graph5 | safe}};
+        Plotly.plot("chart5", graphs5,{});
+
+        var graphs6 = {{ graph6 | safe}};
+        Plotly.plot("chart6", graphs6,{});
+
+        var graphs7 = {{ graph7 | safe}};
+        Plotly.plot("chart7", graphs7,{});
+
+
+    </script>
+
+
+{% endblock %}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Developer contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Hide the div
+            $("#div1").hide();
+            // Show the div after 5s
+            $("#div1").delay(2000).fadeIn(100);
+        });
+    </script>
+</head>
+<style>
+    /* contact section styling */
+    
+    .contact {
+        background-color: white;
+        width: 60%;
+        height: 70%;
+        border-radius: 40px;
+    }
+    
+    .contact .contact-content .column {
+        width: calc(50% - 30px);
+    }
+    
+    .contact .contact-content .text {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .contact .contact-content .left p {
+        text-align: justify;
+    }
+    
+    .contact .contact-content .left .icons {
+        margin: 10px 0;
+    }
+    
+    .contact .contact-content .row {
+        display: flex;
+        height: 65px;
+        align-items: center;
+    }
+    
+    .contact .contact-content .row .info {
+        margin-left: 30px;
+    }
+    
+    .contact .contact-content .row i {
+        font-size: 25px;
+        color: crimson;
+    }
+    
+    .contact .contact-content .info .head {
+        font-weight: 500;
+    }
+    
+    .contact .contact-content .info .sub-title {
+        color: #333;
+    }
+    
+    .contact .right form .fields {
+        display: flex;
+    }
+    
+    .contact .right form .field,
+    .contact .right form .fields .field {
+        height: 45px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .contact .right form .textarea {
+        height: 80px;
+        width: 100%;
+    }
+    
+    .contact .right form .name {
+        margin-right: 10px;
+    }
+    
+    .contact .right form .field input,
+    .contact .right form .textarea textarea {
+        height: 100%;
+        width: 100%;
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        outline: none;
+        padding: 0 15px;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s ease;
+    }
+    
+    .contact .right form .field input:focus,
+    .contact .right form .textarea textarea:focus {
+        border-color: #b3b3b3;
+    }
+    
+    .contact .right form .textarea textarea {
+        padding-top: 10px;
+        resize: none;
+    }
+    
+    .contact .right form .button-area {
+        display: flex;
+        align-items: center;
+    }
+    
+    .right form .button-area button {
+        color: #fff;
+        display: block;
+        width: 200px!important;
+        height: 35px;
+        outline: none;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        background: rgb(73, 76, 248);
+        transition: all 0.3s ease;
+    }
+    
+    .right form .button-area button:hover {
+        background-color: rgb(122, 190, 230);
+        color: black;
+    }
+</style>
+<style>
+    .button {
+        background: #5E5DF0;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 200px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button:hover {
+        background-color: white;
+        color: black;
+    }
+</style>
+<style>
+    /* teams section styling */
+    
+    .teams {
+        width: 100%;
+    }
+    
+    .carousel {
+        width: 100%;
+        height: 100%;
+        margin-top: 25px;
+    }
+    
+    .card {
+        width: 50%;
+        height: 50%;
+        box-sizing: border-box;
+        border: 1px;
+        float: left;
+        text-align: center;
+        padding: 16px;
+    }
+    
+    .teams .carousel .card:hover {
+        background: rgba(51, 170, 51, .4);
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        color: white;
+        overflow: hidden;
+    }
+    
+    .teams .carousel .card .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        background-color: none;
+        color: white;
+        border-radius: 40px;
+        padding: 10px;
+    }
+    
+    .teams .carousel .card:hover .box {
+        transform: scale(0.9);
+        color: white;
+    }
+    
+    .teams .carousel .card .text:hover {
+        color: white;
+    }
+    
+    .teams .carousel .card .text {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 10px 0 7px 0;
+    }
+    
+    .teams .carousel .card img {
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+        transition: all 0.3s ease;
+    }
+    
+    .teams .carousel .card:hover img {
+        border-color: white;
+        transform: scale(1.18);
+    }
+    
+    .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .owl-dot {
+        height: 13px;
+        width: 13px;
+        margin: 0 5px;
+        outline: none!important;
+        border-radius: 50%;
+        border: 2px solid white !important;
+        transition: all 0.3s ease;
+    }
+    
+    .owl-dot.active {
+        width: 35px;
+        border-radius: 14px;
+    }
+    
+    .owl-dot.active,
+    .owl-dot:hover {
+        background: white !important;
+    }
+</style>
+
+<style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        border-color: rgb(167, 167, 241);
+        border-width: .25em;
+        border-style: double;
+        height: 103%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url('/static/developerbg.jpg');
+    }
+    
+    .b1 {
+        margin-top: -3.7%;
+        margin-left: 53%;
+        float: right;
+        padding-right: 40px;
+    }
+    
+    .header {
+        background-color: white;
+        height: fit-content;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: #5E5DF0;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    
+    .header:hover {
+        color: white;
+        background-color: crimson;
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgb(209, 44, 44), 0 0 140px 90px rgb(209, 44, 44);
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="topic">
+            <h1><img src="/static/ribbon.png" alt="cancer logo" width="50px" height="30px"> CANCER DETECTION & ANALYSIS </h1>
+        </div>
+        <div class="b1" id="div1" style="display:none">
+            <form action=" /home " method="POST ">
+                <button type="Submit " class="button " style="vertical-align:middle "> <span> <i class="fa fa-home" style="color:black;font-size:20px;"></i> Home</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="teams" id="teams">
+        <div class="max-width">
+            <div class="carousel owl-carousel">
+                <div class="card" id="c1">
+                    <div class="box">
+                        <img src="/static/cabinetshah.jpg" alt="">
+                        <div class="text"><a id="name" href="https://www.linkedin.com/in/cabinetshah/" style="color: white;">Cabinet Shah</a></div>
+
+                        <p>Data Analyst, Python Developer, Web Developer</p>
+                    </div>
+                </div>
+                <div class="card" id="c2">
+                    <div class="box">
+                        <img src="/static/abhisekh.jpg" alt="">
+                        <div class="text"> <a href="https://www.linkedin.com/in/abhishek-verma-b09796165" style="color: white;">Abhishek Verma</a></div>
+                        <p>Data Analyst</p>
+                    </div>
+                </div>
+                <div class="card" id="c3">
+                    <div class="box">
+                        <img src="/static/senate.jpeg" alt="">
+                        <div class="text"><a href="https://www.linkedin.com/in/senate-shah-7662b8191/" style="color: white;">Senate Shah</a></div>
+                        <p>Data Analyst, Java Developer</p>
+                    </div>
+                </div>
+                <div class="card" id="c4">
+                    <div class="box">
+                        <img src="/static/prasant.jpeg" alt="">
+                        <div class="text"><a href="https://www.linkedin.com/in/prashantkr228/" style="color: white;">Prashant Kumar</a></div>
+                        <p>Cyber Security</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

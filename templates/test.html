@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Feedbackpage</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Hide the div
+            $("#div1").hide();
+            // Show the div after 5s
+            $("#div1").delay(2000).fadeIn(100);
+        });
+    </script>
+</head>
+<style>
+    .button1 {
+        background: #5E5DF0;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 200px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button1:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button1:hover {
+        background-color: white;
+        color: black;
+    }
+</style>
+<style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        border-color: rgb(167, 167, 241);
+        border-width: .25em;
+        border-top-width: 0;
+        border-style: double;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url('/static/feedbackbg.jpg');
+    }
+    
+    .FDB {
+        width: 70%;
+        background-color: none;
+        margin-top: -9px;
+    }
+    
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .wrap {
+        font: 12px Arial, san-serif;
+    }
+    
+    .wrap:hover {
+        transform: scale(0.94);
+        background: rgba(51, 170, 51, .4);
+        color: black;
+    }
+    
+    h1.likert-header {
+        padding-left: 4.25%;
+        margin: 20px 0 0;
+    }
+    
+    form .statement {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 30px 0 0 4.25%;
+        margin-bottom: 10px;
+        color: white;
+    }
+    
+    form .likert {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 35px;
+        display: block;
+        border-bottom: 2px solid none;
+    }
+    
+    form .likert:last-of-type {
+        border-bottom: 0;
+    }
+    
+    form .likert:before {
+        content: '';
+        position: relative;
+        top: 11px;
+        display: block;
+        background-color: #efefef;
+        height: 4px;
+        width: 78%;
+    }
+    
+    form .likert li {
+        display: inline-block;
+        width: 19%;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    form .likert li input[type=radio] {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 50%;
+        margin-left: -6px;
+    }
+    
+    form .likert li label {
+        width: 100%;
+        color: white;
+    }
+    
+    form .buttons {
+        left: 30%;
+        width: 100%;
+        margin-bottom: 37px;
+        padding-bottom: 20px;
+    }
+    
+    form .buttons button {
+        padding: 5px 10px;
+        background-color: rgb(73, 76, 248);
+        border: 0;
+        border-radius: 999px;
+    }
+    
+    form .buttons .clear {
+        background-color: rgb(73, 76, 248);
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+        color: white;
+    }
+    
+    form .buttons .submit {
+        background-color: rgb(73, 76, 248);
+        margin-left: 20px;
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+        color: white;
+    }
+    
+    form .buttons .clear:hover {
+        background-color: rgb(122, 190, 230);
+        color: black;
+    }
+    
+    form .buttons .submit:hover {
+        background-color: rgb(122, 190, 230);
+        color: black;
+    }
+    
+    .b1 {
+        margin-top: -3.7%;
+        margin-left: 53%;
+        float: right;
+        padding-right: 40px;
+    }
+    
+    .header {
+        background-color: white;
+        height: fit-content;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: #5E5DF0;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    
+    .header:hover {
+        color: white;
+        background-color: crimson;
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgb(209, 44, 44), 0 0 140px 90px rgb(209, 44, 44);
+    }
+</style>
+
+<body onload="showAlert1()">
+
+    <div class="header">
+        <div class="topic">
+            <h1><img src="/static/ribbon.png" alt="cancer logo" width="50px" height="30px"> CANCER DETECTION & ANALYSIS </h1>
+        </div>
+        <div class="b1" id="div1" style="display:none">
+            <form action=" /home " method="POST ">
+                <button type="Submit " class="button1 " style="vertical-align:middle "> <span> <i class="fa fa-home" style="color:black;font-size:20px;"></i> Home</span></button></a>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function showAlert1() {
+            var myText = "You reached Feedback Page!";
+            alert(myText);
+        }
+    </script>
+    <center>
+        <div class="FDB" style="background-color: none;padding: 31px; border-radius: 40px;">
+            <div class="wrap" style="background-color: none;border-radius: 40px;">
+                <form action="https://formspree.io/f/mwkylbwl" method="POST">
+                    <label class="statement">I found best Accuracy of model</label>
+                    <ul class='likert'>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Neutral</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="disagree">
+                            <label>Disagree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly disagree</label>
+                        </li>
+                    </ul>
+                    <label class="statement">I found Analysis wonderful</label>
+                    <ul class='likert'>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Neutral</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="disagree">
+                            <label>Disagree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly disagree</label>
+                        </li>
+                    </ul>
+                    <label class="statement">I found Visualization wonderful</label>
+                    <ul class='likert'>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Neutral</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="disagree">
+                            <label>Disagree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly disagree</label>
+                        </li>
+                    </ul>
+                    <label class="statement">I found Project concept wonderful</label>
+                    <ul class='likert'>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Neutral</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="disagree">
+                            <label>Disagree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="likert" value="strong_agree">
+                            <label>Strongly disagree</label>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <button class="clear">Clear</button>
+                        <button class="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </div>
+    </center>
+</body>
+
+</html>

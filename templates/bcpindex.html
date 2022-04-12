@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Prostate Cancer Prediction Model</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button {
+            background: #5E5DF0;
+            border-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 200px;
+            word-break: break-word;
+            border: 0;
+        }
+        
+        .button:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .button:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.3);
+        }
+        
+        .button1 {
+            background: #5E5DF0;
+            border-top-left-radius: 999px;
+            border-bottom-left-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 200px;
+            word-break: break-word;
+            border: 0;
+        }
+        
+        .button1:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .button3 {
+            background: #5E5DF0;
+            border-top-right-radius: 999px;
+            border-bottom-right-radius: 999px;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 200px;
+            word-break: break-word;
+            border: 0;
+        }
+        
+        .button3:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .b3 .button2 {
+            background: #5E5DF0;
+            box-shadow: #5E5DF0 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 14px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 200px;
+            word-break: break-word;
+            border: 0;
+            border-radius: 1px;
+        }
+        
+        .button2:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+        }
+        
+        .button1:hover,
+        .button2:hover,
+        .button3:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <style>
+        button.btnsub1 {
+            left: 10%;
+            position: absolute;
+            top: 134%;
+            width: 850px;
+        }
+        
+        .btnsub1:hover {
+            background-color: rgb(122, 190, 230);
+            color: black;
+        }
+        
+        @font-face {
+            font-family: Raleway-Black;
+            src: url('../fonts/raleway/Raleway-Black.ttf');
+        }
+        
+        @font-face {
+            font-family: Raleway-SemiBold;
+            src: url('../fonts/raleway/Raleway-SemiBold.ttf');
+        }
+        
+        @font-face {
+            font-family: Raleway-Bold;
+            src: url('../fonts/raleway/Raleway-Bold.ttf');
+        }
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 120%;
+            border-top-width: 0;
+            border-color: rgb(167, 167, 241);
+            border-width: .25em;
+            border-style: double;
+            border-top-width: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)), url('/static/indexbg.jpg');
+        }
+        
+        .container_main {
+            height: 100%;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            margin-bottom: auto;
+            display: block;
+            background-color: none;
+        }
+        
+        a {
+            font-family: Raleway-SemiBold;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666666;
+            margin: 0px;
+        }
+        
+        a:focus {
+            outline: none;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .highlight {
+            text-decoration: underline;
+            color: #9D50BB;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 1px;
+        }
+        
+        .main_heading {
+            margin-left: 250px;
+            margin-right: 250px;
+            color: #4f81bd;
+        }
+        
+        input {
+            border-radius: 10px;
+            width: 70%;
+        }
+        
+        label {
+            float: right;
+        }
+        
+        span {
+            display: block;
+            overflow: hidden;
+            padding: 0px 4px 0px 6px;
+        }
+        
+        button {
+            border-radius: 20px;
+            outline: none;
+            height: 30px;
+            width: 100px;
+            color: #ffffffff;
+            background: #1dce4a;
+        }
+        
+        button:hover {
+            cursor: pointer;
+        }
+        
+        table.t1 {
+            width: 75%;
+            margin-left: 12%;
+            margin-top: 0%;
+            border: 1px border;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .t1 th,
+        .t1 td {
+            padding: 8px 8px;
+        }
+        
+        .t1 thead th {
+            background: #4f81bd;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 17px;
+            color: #fff;
+        }
+        
+        .t1 tr {
+            border-right: 1px solid none;
+            border-left: 1px solid none;
+        }
+        
+        .t1 tbody tr {
+            border-bottom: 1px solid none;
+        }
+        
+        .t1 tbody tr:nth-child(odd) {
+            background: none;
+            border-right: 1px solid none;
+        }
+        
+        .t1 tbody tr:nth-child(even) {
+            border-right: 1px solid none;
+        }
+        
+        .t1 tfoot th {
+            background: #4f81bd;
+            text-align: left;
+            font-weight: normal;
+            font-size: 15px;
+            color: rgb(247, 247, 247);
+        }
+        
+        .container_main {
+            background-color: none;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 9%;
+        }
+        
+        .sub_container {
+            width: 1140px;
+            top: 25px;
+            margin-top: 40px;
+            margin-left: 5px;
+            color: white;
+        }
+    </style>
+
+    <style>
+        .container1 {
+            display: grid;
+            grid-template-columns: repeat(1, 160px);
+            grid-gap: 80px;
+            background: none;
+            padding: 60px;
+            margin: auto 0;
+            width: 30%;
+            margin-top: -860px;
+            margin-right: 40px;
+            float: right;
+            margin-bottom: 18%;
+        }
+        
+        @media (min-width: 420px) and (max-width: 659px) {
+            .container1 {
+                grid-template-columns: repeat(2, 160px);
+            }
+        }
+        
+        @media (min-width: 660px) and (max-width: 899px) {
+            .container1 {
+                grid-template-columns: repeat(3, 160px);
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .container1 {
+                grid-template-columns: repeat(3, 160px);
+            }
+        }
+        
+        .container1 .box1 {
+            width: 100%;
+        }
+        
+        .container1 .box1 .chart {
+            position: relative;
+            float: right;
+            right: -60px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 43px;
+            line-height: 300px;
+            height: 200px;
+            color: #fff;
+        }
+        
+        .container1 .box1 canvas {
+            position: absolute;
+            top: -5px;
+            left: -50px;
+            width: 100%;
+            width: 100%;
+        }
+        
+        .hd {
+            float: right;
+            margin-top: -30%;
+            width: 100%;
+            margin-bottom: 10%;
+            margin-right: -48%;
+            text-align: center;
+            font-size: xx-large;
+        }
+        
+        .header {
+            background-color: white;
+            height: fit-content;
+            padding-left: 50px;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            box-shadow: #5E5DF0;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            position: sticky;
+            top: 0;
+        }
+        
+        .header:hover {
+            color: white;
+            background-color: crimson;
+            box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgb(209, 44, 44), 0 0 140px 90px rgb(209, 44, 44);
+        }
+        
+        .mj100 {
+            float: left;
+            margin-top: -3%;
+            margin-left: 54%;
+        }
+        
+        .mj100:hover {
+            transform: scale(1.18);
+        }
+        
+        .form-control {
+            border-radius: 40px;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body onload="showAlert()">
+    <script>
+        function showAlert() {
+            var myText = "Reached Prostrate cancer Prediction!";
+            alert(myText);
+        }
+    </script>
+
+    <script>
+        function showAlert1() {
+            var myText = "https://www.cancer.org/treatment/treatments-and-side-effects.html";
+            window.open(myText, "", "toolbar=no,status=no,menubar=no,location=center,left=400,top=230,scrollbars=no,resizable=yes,height=480,width=800");
+        }
+    </script>
+
+    <div class="container_main">
+        <div class="header">
+            <div class="topic" style="font-family: 'Times New Roman', Times, serif;">
+                <h1><img src="/static/ribbon.png" alt="cancer logo" width="50px" height="30px">CANCER DETECTION & ANALYSIS </h1>
+            </div>
+            <div class="mj100" style="width: fit-content;">
+                <div class="b1" style="float: left; width: fit-content;margin-right: 2px;">
+                    <form action="/allset " method="POST ">
+                        <button type="Submit " class="button1" style="vertical-align:middle "> <span> ↩️   Previous </span></button>
+                    </form>
+                </div>
+                <div class="b3" style="float: left; width: fit-content;margin-left: 2px; margin-right: 2px;">
+                    <button type=" Submit " class="button2" onclick="showAlert1() " style="vertical-align:middle "> <span><i class="fa fa-medkit" aria-hidden="true" ></i> Treatment </span></button>
+                </div>
+                <div class="b2 " style="float: left; width: fit-content;margin-left: 2px; ">
+                    <form action="/bcpaccuracy " method="GET ">
+                        <button type="Submit " class="button3 " style="vertical-align:middle "> <span>📈 Accuracy Chart </span></button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="sub_container " id="holder ">
+            <table class="t1">
+                <form class="form-horizontal" action="{{ url_for('predict')}}" method="post">
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <tfoot>
+                                <tr>
+                                    <th colspan="2" style="border-radius: 100px;">
+                                        <center><b><h4>{{ prediction_text}}</h4></b></center>
+                                    </th>
+                                </tr>
+                            </tfoot>
+                            <tr>
+                                <td><label for="radius_mean">Radius Mean:</label></td>
+                                <td>
+                                    <span>
+                      <input  class="form-control" type= "text" name="radius_mean" placeholder="" required="required" />
+                    </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="area_mean">Area Mean:</label></td>
+                                <td>
+                                    <span><input  class="form-control" type="text" name="area_mean" placeholder="" required="required" /></span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="concavity_worst">Concavity Worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="concavity_worst" placeholder="" required="required" />
+        </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="concavity_mean">Concavity mean:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="concavity_mean" placeholder="" required="required" />
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="concave points_worst">Concave points worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="concave points_worst" placeholder="" required="required" />
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="perimeter_worst">Perimeter worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="perimeter_worst" placeholder="" required="required" />
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="smoothness_worst">Smoothness Worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="smoothness_worst" placeholder="" required="required" />
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="radius_worst">Radius Worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="radius_worst" placeholder="" required="required" />
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="area_worst">Area Worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="area_worst" placeholder="" required="required" />
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="concave points_mean">Concave points_mean:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="concave points_mean" placeholder="" size="3" required="required"/>
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="area_se">Area se:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="area_se" placeholder="" size="3" required="required"/>
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="texture_worst">Texture worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="texture_worst" placeholder="" size="3" required="required"/>
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="compactness_worst">Compactness worst:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="compactness_worst" placeholder="" size="3" required="required"/>
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <tr>
+                                <td><label for="compactness_mean">Compactness_Mean:</label></td>
+                                <td>
+                                    <span>
+          <input  class="form-control" type="text" name="compactness_mean" placeholder="" size="3" required="required"/>
+          </span>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <tr>
+                                <td colspan="2"><button type="submit" class="btnsub1">PREDICT</button></td>
+                            </tr>
+                        </div>
+                    </div>
+                </form>
+                <h2 class="result"></h2>
+        </div>
+    </div>
+    </table>
+
+    </div>
+    </div>
+
+    <div class="container1">
+        <div class="box1 ">
+            <div class="hd">
+                <h2 style="font-size: xx-large;color: white; font-family: Lucida Handwriting;"><b>Predicted Percentage</b></h2>
+            </div>
+            <div class="chart " data-percent={{y}}>{{x}}</div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript ">
+        $(function() {
+            $('.chart').easyPieChart({
+                size: 300,
+                barColor: "#36e617 ",
+                scaleLength: 20,
+                lineWidth: 35,
+                trackColor: "#fff ",
+                lineCap: "circle ",
+                animate: 2000,
+            });
+        });
+    </script>
+</body>
+
+</html>

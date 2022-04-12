@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Visualization</title>
+</head>
+<style>
+    .button {
+        background: #5E5DF0;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 0px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 0px;
+        word-break: break-word;
+        border: 0;
+        margin-left: -180px;
+        margin-top: -170px;
+        opacity: 0;
+    }
+    
+    .button:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    .button1 {
+        background: #5E5DF0;
+        border-radius: 999px;
+        box-shadow: #5E5DF0 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 200px;
+        word-break: break-word;
+        border: 0;
+    }
+    
+    .button1:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(61, 42, 226, 0.5), -.125rem -.125rem 1rem rgba(61, 196, 61, 0.5), .125rem .125rem 1rem rgba(82, 194, 67, 0.5);
+    }
+    
+    .button1:hover {
+        background-color: white;
+        color: black;
+    }
+</style>
+<style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        border-color: rgb(167, 167, 241);
+        border-width: .25em;
+        border-style: double;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+    }
+    
+    .header {
+        background-color: white;
+        height: fit-content;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: #5E5DF0;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        height: 100px;
+        top: 0;
+    }
+    
+    .header:hover {
+        color: white;
+        background-color: crimson;
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px rgb(209, 44, 44), 0 0 140px 90px rgb(209, 44, 44);
+    }
+    
+    .mj45 {
+        float: right;
+        margin-top: -2.7%;
+        margin-right: 50px;
+    }
+    
+    .mj45:hover {
+        transform: scale(1.18);
+    }
+</style>
+
+<body onload="showAlert1()">
+    <script>
+        function showAlert1() {
+            var myText = "Reached Visualization Page!";
+            alert(myText);
+        }
+    </script>
+    <div class="header">
+        <div class="topic">
+            <h1> <img src="/static/ribbon.png" alt="cancer logo" width="50px" height="30px"> CANCER DETECTION & ANALYSIS </h1>
+        </div>
+        <div class="mj45" style="width: fit-content;">
+            <div style="float: right; width: fit-content; margin-right: 2px;">
+                <form action="/demo" , method="GET" style="margin-right: auto;">
+                    <button type="Submit" class="button1" style="vertical-align:middle"> <span>↩️ Previous </span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <main>
+
+        <div class="container" style="background-color: none;width: 130%;">
+            <div class="row" style="width: 100%;">
+                <div class="col-md-12 col-sm-12 col-xm-12" style="margin-left: 5px;">
+                    <div class="ml-auto mr-auto" style="width: 100%;color: red;background-color: white; margin-top:5%; border-radius: 40px;">
+                        {%block content %} {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
