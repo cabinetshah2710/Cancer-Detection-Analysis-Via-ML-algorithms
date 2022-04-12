@@ -9,7 +9,7 @@ collection==0.1.6
 collections-extended==1.0.3
 colorama==0.4.4
 cycler==0.10.0
-dataclasses==0.8
+
 Django==3.2.12
 Flask==2.0.2
 google-auth==2.6.2
