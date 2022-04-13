@@ -70,9 +70,8 @@ def upload1():
 def pc():
     return render_template('/index.html')
 
-pcp_m = 'C:/Users/Cabinet/Documents/visual studio codes/Copy of main project/Model deployment/PCP_model.pkl'
 
-model = joblib.load(pcp_m)
+model = joblib.load('PCP_model.pkl')
 
 @app.route('/prediction1',methods=['POST'])
 def prediction1():
@@ -173,8 +172,8 @@ def chart12():
     return render_template("lcpindex.html")
 
 
-lcp_m = 'C:/Users/Cabinet/Documents/visual studio codes/Copy of main project/Model deployment/LCP_lr_model.pkl'
-model3 = joblib.load(lcp_m)
+
+model3 = joblib.load('LCP_lr_model.pkl')
 
 @app.route('/lcppredict',methods=['POST'])
 def lcppredict():
