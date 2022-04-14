@@ -1,9 +1,9 @@
 # Developer
-# Cabinet kumar shah (*  [![Portfolio](http://img.shields.io/badge/Web-Portfolio-blue.png)](https://www.cabinetkumarshah.com.np/) *) || [<img src="https://user-images.githubusercontent.com/53578487/163301223-4d3492fb-5dad-465e-915e-70924c14f0ca.png" width="25" height="25" />](https://www.linkedin.com/in/cabinetshah/)  || [<img src="https://user-images.githubusercontent.com/53578487/163303160-ebf9d1d0-f728-47ac-82a4-9075c3898bc4.png" width="25" height="25" />](https://www.cabinetkumarshah.com.np/) || [<img src="https://user-images.githubusercontent.com/53578487/163302509-e27d55ed-8584-47b2-bfcf-6ebd36055743.png" width="25" height="25" />](https://wa.me/message/XQJGPQTNIYQPP1)
+## Cabinet kumar shah (*  [![Portfolio](http://img.shields.io/badge/Web-Portfolio-blue.png)](https://www.cabinetkumarshah.com.np/) *) || [<img src="https://user-images.githubusercontent.com/53578487/163301223-4d3492fb-5dad-465e-915e-70924c14f0ca.png" width="25" height="25" />](https://www.linkedin.com/in/cabinetshah/)  || [<img src="https://user-images.githubusercontent.com/53578487/163303160-ebf9d1d0-f728-47ac-82a4-9075c3898bc4.png" width="25" height="25" />](https://www.cabinetkumarshah.com.np/) || [<img src="https://user-images.githubusercontent.com/53578487/163302509-e27d55ed-8584-47b2-bfcf-6ebd36055743.png" width="25" height="25" />](https://wa.me/message/XQJGPQTNIYQPP1)
 
 _______
-
-[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=cabinetshah2710)](https://github.com/cabinetshah2710)
+&emsp;&emsp;&emsp;
+[![Anurag’s github stats](https://github-readme-stats.vercel.app/api?username=cabinetshah2710)](https://github.com/cabinetshah2710) &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cabinetshah2710)](https://github.com/cabinetshah2710)
 
 _________
