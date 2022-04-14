@@ -48,6 +48,6 @@ ______________
 ![image](https://user-images.githubusercontent.com/53578487/163293084-4030b183-b913-4b90-ad84-b476914da576.png)
 
 --------------------------------------------------------------------------------------------------------------------------------
-###[Developers](https://cancer-detection-and-analysis.herokuapp.com/developer)
+### [Developers](https://cancer-detection-and-analysis.herokuapp.com/developer)
 ![image](https://user-images.githubusercontent.com/53578487/163293554-e16b0d25-7dab-4ed1-abb3-6ddaf54ce0b8.png)
 
