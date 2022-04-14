@@ -11,7 +11,7 @@ https://cancer-detection-and-analysis.herokuapp.com/
 ______________
 
 ## Developer Details
-#### Cabinet kumar shah [ [LinkedIn](https://www.linkedin.com/in/cabinetshah/) || [Portfolio](www.cabinetkumarshah.com.np) ]
+#### Cabinet kumar shah [ [LinkedIn](https://www.linkedin.com/in/cabinetshah/) || [Portfolio](https://www.cabinetkumarshah.com.np/) ]
 
 #### Senate shah [LinkedIn](https://www.linkedin.com/in/senate-shah-7662b8191/)
 
