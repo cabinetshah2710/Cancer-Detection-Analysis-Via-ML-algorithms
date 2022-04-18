@@ -87,3 +87,16 @@ ______________
 <img src="https://user-images.githubusercontent.com/53578487/163749215-b9a26423-9abd-4f89-bd79-c22bec868992.jpeg" width="900" />
 
 
+--------------------------------------------------------------------------------------------------------------------------------
+### [Catch Us Interface ](https://cancer-detection-and-analysis.herokuapp.com/Registration)
+<img src="https://user-images.githubusercontent.com/53578487/163749598-ad9ceb8c-2821-44ec-b082-7909baa18c13.png" width="900" />
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+### [FeedBack Interface ](https://cancer-detection-and-analysis.herokuapp.com/test)
+<img src="https://user-images.githubusercontent.com/53578487/163749557-22f4c248-be68-4ee6-846a-ec8390c37dd6.png" width="900" />
+
+
+ 
+ 
+
