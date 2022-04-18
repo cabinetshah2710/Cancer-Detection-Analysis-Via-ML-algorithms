@@ -57,29 +57,33 @@ ______________
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### [Web App Home Interface ](https://cancer-detection-and-analysis.herokuapp.com/)
-<img src="https://user-images.githubusercontent.com/53578487/163092439-29198665-aded-4e74-855e-8181de3e2c33.png" width="800" height="400" />
+ 
+
+<img src="https://user-images.githubusercontent.com/53578487/163748404-32b67c6e-3cc0-4ba9-9fcd-6566df845836.jpeg" width="900"/>
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### [Prostate cancer Prediction Interface ](https://cancer-detection-and-analysis.herokuapp.com/index)
 #### [Model Accuracy comparison](https://cancer-detection-and-analysis.herokuapp.com/pcpaccuracy)
-<img src="https://user-images.githubusercontent.com/53578487/163291929-8155d148-95ae-4633-a65f-a0b3fa83b038.png" width="800" height="400" />
+<img src="https://user-images.githubusercontent.com/53578487/163748748-1527ff3a-a17b-45e9-ae12-48c1788ef0c7.jpeg" width="900" />
 
---------------------------------------------------------------------------------------------------------------------------------
+
+ --------------------------------------------------------------------------------------------------------------------------------
 ### [Breast cancer Prediction Interface ](https://cancer-detection-and-analysis.herokuapp.com/bcpindex)
 #### [Model Accuracy comparison](https://cancer-detection-and-analysis.herokuapp.com/bcpaccuracy)
-<img src="https://user-images.githubusercontent.com/53578487/163292100-3e680d52-7051-45f5-8ed0-3915f551728c.png" width="800" height="400" />
+<img src="https://user-images.githubusercontent.com/53578487/163748671-bea94a1e-ac9f-45c1-801d-431eb878ddb3.jpeg" width="900" />
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### [Lung cancer Prediction Interface ](https://cancer-detection-and-analysis.herokuapp.com/lcpindex)
 #### [Model Accuracy comparison](https://cancer-detection-and-analysis.herokuapp.com/lcpaccuracy)
-<img src="https://user-images.githubusercontent.com/53578487/163291521-ec2db897-89b3-44b2-8d66-b63aec513c0c.png" width="800" height="400" />
+<img src="https://user-images.githubusercontent.com/53578487/163748790-c9fcd0fe-f667-42dc-9120-4851dd322b0c.jpeg" width="900" />
+
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### [Upload Dataset Interface ](https://cancer-detection-and-analysis.herokuapp.com/demo)
-<img src="https://user-images.githubusercontent.com/53578487/163293084-4030b183-b913-4b90-ad84-b476914da576.png" width="800" height="400" />
+<img src="https://user-images.githubusercontent.com/53578487/163749170-a54f3ad3-9542-4bc4-ad33-dd150bf84dea.jpeg" width="900" />
 
 --------------------------------------------------------------------------------------------------------------------------------
 ### [Developers Interface ](https://cancer-detection-and-analysis.herokuapp.com/developer)
-<img src="https://user-images.githubusercontent.com/53578487/163293554-e16b0d25-7dab-4ed1-abb3-6ddaf54ce0b8.png" width="800" height="400" />
+<img src="https://user-images.githubusercontent.com/53578487/163749215-b9a26423-9abd-4f89-bd79-c22bec868992.jpeg" width="900" />
 
 
